@@ -30,7 +30,7 @@ namespace MarsQA1.SpecFlowPages.Pages
 
         private static string Alertpopuppath = "//div[@class='ns-box-inner']";
         public static IWebElement Alertpopup => Driver.driver.FindElement(By.XPath(Alertpopuppath));
-        private static IWebElement UpdateActionBttn => Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[1]/i"));
+        private static IWebElement UpdateActionBttn => Driver.driver.FindElement(By.XPath("//*//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[1]/i"));
         private static IWebElement UpdateLanguage => Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td/div/div[1]/input"));
         private static IWebElement UpdateLanguageLevel => Driver.driver.FindElement(By.Name("level"));
         private static IWebElement SaveUpdate => Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td/div/span/input[1]"));

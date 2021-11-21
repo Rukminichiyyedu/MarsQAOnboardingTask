@@ -37,6 +37,7 @@ namespace MarsQA1.SpecFlowPages.Helpers
         private static DataTable ExcelToDataTable(string fileName, string sheetName)
         {
             // Open file and return as Stream
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read))
             {
                 using (var reader = ExcelReaderFactory.CreateReader(stream))

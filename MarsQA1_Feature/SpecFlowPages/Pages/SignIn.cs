@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Office.CustomUI;
 using MarsQA1.SpecFlowPages.Helpers;
 using OpenQA.Selenium;
+using System.Threading;
 using Slack.Webhooks.Blocks;
 using System;
 using System.Collections.Generic;
@@ -12,15 +13,16 @@ namespace MarsQA1.SpecFlowPages.Pages
     {
 
         //private static IWebElement SignInBtn => Driver.driver.FindElement(By.XPath());
-        private static IWebElement Email => Driver.driver.FindElement(By.XPath("//INPUT[@type='Username']"));
+        private static IWebElement SignInBtn => Driver.driver.FindElement(By.XPath("//A[@class='item'][text()='Sign In']"));
+        private static IWebElement Email => Driver.driver.FindElement(By.XPath("(//INPUT[@type='text'])[2]"));
         private static IWebElement Password => Driver.driver.FindElement(By.XPath("//INPUT[@type='password']"));
         private static IWebElement LoginBtn => Driver.driver.FindElement(By.XPath("//BUTTON[@class='fluid ui teal button'][text()='Login']"));
         public static void SigninStep()
         {
             Driver.NavigateUrl();
-            //SignInBtn.Click();
-            Email.SendKeys(ExcelLibHelper.ReadData(2, "username"));
-            Password.SendKeys(ExcelLibHelper.ReadData(2, "password"));
+            SignInBtn.Click();
+            Email.SendKeys(ExcelLibHelper.ReadData(2, "UserName"));
+            Password.SendKeys(ExcelLibHelper.ReadData(2, "Password"));
             LoginBtn.Click();
         }
         public static void Login()

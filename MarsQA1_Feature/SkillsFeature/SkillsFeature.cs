@@ -116,13 +116,13 @@
         }
 
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Seller update skill")]
+        [NUnit.Framework.DescriptionAttribute("Seller andupdate skill")]
         [NUnit.Framework.CategoryAttribute("mytag")]
         public virtual void SellerUpdateSkill()
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller update skill", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller andupdate skill", null, new string[] {
                         "mytag"},argumentsOfScenario);
 #line 18
             this.ScenarioInitialize(scenarioInfo);

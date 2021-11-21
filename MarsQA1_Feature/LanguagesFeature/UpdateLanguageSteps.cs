@@ -14,25 +14,25 @@ namespace MarsQA1.LanguagesFeature
         {
             Language.UpdateIcon();
         }
-        
+
         [Given(@"I update Language as '(.*)'")]
         public void GivenIUpdateLanguageAs(string Hindi)
         {
             Language.UpdateLanguageName(Hindi);
         }
-        
+
         [Given(@"I select level '(.*)'")]
         public void GivenISelectLevel(string Fluent)
         {
             Language.UpdateLevel(Fluent);
         }
-        
+
         [When(@"click on Update button")]
         public void WhenClickOnUpdateButton()
         {
             Language.SaveActionButton();
         }
-        
+
         [Then(@"Languageupdated successfully and pop up message displayed ""(.*)"" on the top right of web page\.")]
         public void ThenLanguageupdatedSuccessfullyAndPopUpMessageDisplayedOnTheTopRightOfWebPage_(string Expected)
         {
